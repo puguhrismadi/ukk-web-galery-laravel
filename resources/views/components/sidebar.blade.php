@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="index.html">Galery</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="index.html">Gs</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
@@ -17,7 +17,7 @@
             <li class="menu-header">Pages</li>
             <li class="nav-item dropdown {{ $type_menu === 'auth' ? 'active' : '' }}">
                 <a href="#"
-                    class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
+                    class="nav-link has-dropdown"><i class="far fa-user"></i> <span>User</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('auth-forgot-password') ? 'active' : '' }}">
                         <a href="{{ url('auth-forgot-password') }}">Forgot Password</a>
@@ -38,21 +38,21 @@
                 </ul>
             </li>
            
-            <li class="nav-item dropdown {{ $type_menu === 'features' ? 'active' : '' }}">
+            <li class="nav-item dropdown {{ $type_menu === 'posts' ? 'active' : '' }}">
                 <a href="#"
-                    class="nav-link has-dropdown"><i class="fas fa-bicycle"></i> <span>Features</span></a>
+                    class="nav-link has-dropdown"><i class="fas fa-images"></i> <span>Galery</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('features-activities') ? 'active' : '' }}">
                         <a class="nav-link"
                             href="{{ url('features-activities') }}">Activities</a>
                     </li>
-                    <li class="{{ Request::is('features-post-create') ? 'active' : '' }}">
+                    <li class="{{ Request::is('posts/create') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('features-post-create') }}">Post Create</a>
+                            href="{{ url('posts/create') }}">Post Create</a>
                     </li>
-                    <li class="{{ Request::is('features-post') ? 'active' : '' }}">
+                    <li class="{{ Request::is('posts') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('features-post') }}">Posts</a>
+                            href="{{ url('posts') }}">Posts</a>
                     </li>
                     <li class="{{ Request::is('features-profile') ? 'active' : '' }}">
                         <a class="nav-link"
