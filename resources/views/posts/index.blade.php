@@ -43,6 +43,7 @@
                                 
 
                                 <div class="table-responsive">
+                                    
                                     <table class="table-striped table">
                                         <thead>
                                         <tr>
@@ -73,21 +74,23 @@
                                             </td>
                                             <td>{{ $post->judul }}
                                                 <div class="table-links">
-                                                    <a href="#">View</a>
-                                                    <div class="bullet"></div>
-                                                    <a href="{{ route('posts.edit', $post->id) }}">Edit</a>
-                                                    <div class="bullet"></div>
+                                                    <a class="btn btn-outline-primary btn-sm" href="#">View</a>
+                                                    
+                                                    <a class="btn btn-outline-primary btn-sm" href="{{ route('posts.edit', $post->id) }}">Edit</a>
+                                                    
                                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-        
-                                                    <button type="submit" class="a"
+                                                    
+                                                    <button type="submit" class="btn btn-outline-danger btn-sm"
                                                         class="text-danger">Trash</button>
+                                                   
                                                     </form>
+                                               
                                                 </div>
                                             </td>
                                             <td>
-                                                {{ $post->kategori_id }}
+                                                {{ $post->kategori->judul }}
                                                 
                                             </td>
                                             <td>
